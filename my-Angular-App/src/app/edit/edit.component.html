@@ -1,0 +1,15 @@
+<h2>Edit product</h2>
+
+<p *ngIf="update_errors">{{update_errors}}</p>
+<form (submit)="updateOne(update_product._id)">
+  <p> {{update_product | json}}</p>
+ Name:
+  <input type="text" name="update_product.name" [(ngModel)]="update_product.name" />
+  <br>
+  <br> cuisine:
+  <input type="text" name="update_product.cuisine" [(ngModel)]="update_product.cuisine" />
+  <br>
+  <br>
+  <button type="submit"> EDIT</button>
+</form>
+<button (click)="goHome()"> CANCEL</button>

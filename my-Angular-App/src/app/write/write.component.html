@@ -1,0 +1,17 @@
+<h3>Write a review for taco bell</h3>
+
+<p *ngIf="update_errors">{{update_errors}}</p>
+<form>
+  <!-- <p> {{review | json}}</p> -->
+ Your name:
+  <input type="text" name="review.user" [(ngModel)]="review.user" />
+  <br>
+  <br> Stars:
+  <input type="text" name="review.stars" [(ngModel)]="review.stars" />
+  <br>
+  <br>Review:
+  <input type="text" name="review.content" [(ngModel)]="review.content" />
+  <br>
+  <button type="submit"> SUBMIT</button>
+</form>
+<button (click)="goHome()"> CANCEL</button>

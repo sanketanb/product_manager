@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<div *ngFor="let individual of display_products" style="text-align:center">
+  <p>Restaurant: {{individual.name}}</p>
+  <p>Cuisine: {{individual.cuisine}}</p>
+  <button (click) = "goReviewsPage(individual._id)">Read Reviews</button>
+  <button (click) = "goEditPage(individual._id)">EDIT</button>
+  <button (click)="deleteProduct(individual._id)">DELETE</button>
+</div>
+</html>
